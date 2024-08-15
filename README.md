@@ -7,3 +7,10 @@ WHAT
 HOW 
 
 RESULTS
+
+SKILLS
+	- create a github environment
+	- data analysis
+	- data visualization
+	- python
+	- FastF1 v2.2 and v3.2
