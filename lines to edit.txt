@@ -1,0 +1,13 @@
+LINE 18-19: make it with input and check the capitol letter
+
+
+LINE 21: make is so that we can decide the numbers of pilots, make a for loop for the numbers of pilots to enter and then ask as many times to enter the name of the pilot. store the pilots in an appropriate data structure
+
+
+LINE 
+
+
+LINE
+
+
+LINE
