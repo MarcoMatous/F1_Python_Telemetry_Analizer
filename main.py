@@ -19,7 +19,7 @@ ff1.Cache.enable_cache('cache')
 year, grand_prix, session = 2022,'Saudi Arabia', 'Q'
 quali = ff1.get_session(year, grand_prix, session)
 quali.load()
-driver_1, driver_2 = 'PER', 'LEC'
+driver_1, driver_2 = 'HAM', 'LEC'
 
 # Accessing the laps with the .laps object coming from the session
 laps_driver_1 = quali.laps.pick_driver(driver_1)
