@@ -44,4 +44,10 @@ delta_time, ref_tel, compare_tel = utils.delta_time(fastest_driver_1, fastest_dr
 ####################################################
 ## Plotting the data ##
 
+plot_size = [15,15]
+plot_title = f"{quali.event.year} {quali.event.EventName} - {quali.name} - {driver_1} vs {driver_2}"
+plot_ratios = [1,3,2,1,1,2,1]
+plot_filename = plot_title.replace(" ", "") + ".png"
+
+
 
