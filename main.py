@@ -78,6 +78,13 @@ ax[2].plot(telemetry_driver_2['Distance'], telemetry_driver_2['Throttle'], label
 ax[2].set(ylabel = 'Throttle')
 ax[2].legend(loc='lower right')
 
+#Brake trace
+
+#Gear trace
+
+#RPM trace
+
+#DRS trace
 
 
 # Hide x labels and tick labels for top plots and y ticks for right plots.
