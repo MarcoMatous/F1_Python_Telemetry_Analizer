@@ -15,7 +15,7 @@ ff1.Cache.enable_cache('cache')
 
 ####################################################
 ## Collecting the data ##
-year, grand_prix, session = 2022,'Saudi Arabia', 'Q'
+year, grand_prix, session = 2022,'Italy', 'Q'
 quali = ff1.get_session(year, grand_prix, session)
 quali.load()
 driver_1, driver_2 = 'PER', 'LEC'
@@ -47,7 +47,11 @@ delta_time, ref_tel, compare_tel = utils.delta_time(fastest_driver_1, fastest_dr
 plot_size = [15,15]
 plot_title = f"{quali.event.year} {quali.event.EventName} - {quali.name} - {driver_1} vs {driver_2}"
 plot_ratios = [1,3,2,1,1,2,1]
-plot_filename = plot_title.replace(" ", "") + ".png"
+plot_filename = plot_title + ".png"
 
+print(quali.event)
 
+print()
+print()
 
+print(plot_filename)
