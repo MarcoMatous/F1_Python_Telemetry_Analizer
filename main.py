@@ -79,13 +79,29 @@ ax[2].set(ylabel = 'Throttle')
 ax[2].legend(loc='lower right')
 
 #Brake trace
+ax[3].plot(telemetry_driver_1['Distance'], telemetry_driver_1['Brake'], label = driver_1, color = ff1.plotting.team_color(team_driver_1))
+ax[3].plot(telemetry_driver_2['Distance'], telemetry_driver_2['Brake'], label = driver_2, color = ff1.plotting.team_color(team_driver_2))
+ax[3].set(ylabel = 'Brake')
+
 
 #Gear trace
+ax[4].plot(telemetry_driver_1['Distance'], telemetry_driver_1['nGear'], label = driver_1, color = ff1.plotting.team_color(team_driver_1))
+ax[4].plot(telemetry_driver_2['Distance'], telemetry_driver_2['nGear'], label = driver_2, color = ff1.plotting.team_color(team_driver_2))
+ax[4].set(ylabel = 'Gear')
+
 
 #RPM trace
+ax[5].plot(telemetry_driver_1['Distance'], telemetry_driver_1['RPM'], label=driver_1, color=ff1.plotting.team_color(team_driver_1))
+ax[5].plot(telemetry_driver_2['Distance'], telemetry_driver_2['RPM'], label=driver_2, color=ff1.plotting.team_color(team_driver_2))
+ax[5].set(ylabel='RPM')
+ax[5].legend(loc='lower right')
+
 
 #DRS trace
-
+ax[6].plot(telemetry_driver_1['Distance'], telemetry_driver_1['DRS'], label=driver_1, color=ff1.plotting.team_color(team_driver_1))
+ax[6].plot(telemetry_driver_2['Distance'], telemetry_driver_2['DRS'], label=driver_2, color=ff1.plotting.team_color(team_driver_2))
+ax[6].set(ylabel='DRS')
+ax[6].set(xlabel='Lap distance (meters)')
 
 # Hide x labels and tick labels for top plots and y ticks for right plots.
 for a in ax.flat:
@@ -94,3 +110,4 @@ for a in ax.flat:
 # Store figure
 plt.savefig(plot_filename, dpi=300)
 plt.show()
+
