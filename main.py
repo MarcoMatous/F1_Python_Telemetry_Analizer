@@ -19,23 +19,27 @@ ff1.Cache.enable_cache('cache')
 year, grand_prix, session = 2022,'Saudi Arabia', 'Q'
 quali = ff1.get_session(year, grand_prix, session)
 quali.load()
-driver_1, driver_2 = 'HAM', 'LEC'
+driver_1, driver_2, driver_3 = 'HAM', 'LEC', 'LAT'
 
 # Accessing the laps with the .laps object coming from the session
 laps_driver_1 = quali.laps.pick_driver(driver_1)
 laps_driver_2 = quali.laps.pick_driver(driver_2)
+laps_driver_3 = quali.laps.pick_driver(driver_3)
 
 # Select the fastest lap
 fastest_driver_1 = laps_driver_1.pick_fastest()
 fastest_driver_2 = laps_driver_2.pick_fastest()
+fastest_driver_3 = laps_driver_3.pick_fastest()
 
 # Retrieve the telemetry and add the distance column
 telemetry_driver_1 = fastest_driver_1.get_telemetry().add_distance()
 telemetry_driver_2 = fastest_driver_2.get_telemetry().add_distance()
+telemetry_driver_3 = fastest_driver_3.get_telemetry().add_distance()
 
 # Assigning the right color to the team-driver telemetry charts
 team_driver_1 = fastest_driver_1['Team']
 team_driver_2 = fastest_driver_2['Team']
+team_driver_3 = fastest_driver_3['Team']
 
 # Delta time laps
 '''This line shows the gap to the other driver in seconds throughout the lap. Important side note: this delta is an estimation, and therefore not too accurate. It does not represent the exact gap at any moment of a lap, but it shows us where a driver gained or lost time compared to another.'''
@@ -67,6 +71,8 @@ ax[0].legend(loc='lower right')
 #Speed trace    
 ax[1].plot(telemetry_driver_1['Distance'], telemetry_driver_1['Speed'], label = driver_1, color = ff1.plotting.team_color(team_driver_1))
 ax[1].plot(telemetry_driver_2['Distance'], telemetry_driver_2['Speed'], label = driver_2, color = ff1.plotting.team_color(team_driver_2))
+ax[1].plot(telemetry_driver_3['Distance'], telemetry_driver_3['Speed'], label = driver_3, color = ff1.plotting.team_color(team_driver_3))
+
 ax[1].set(ylabel = 'Speed')
 ax[1].legend(loc='lower right')
 ax[1].grid(True, linestyle = '--')
@@ -75,12 +81,14 @@ ax[1].grid(True, linestyle = '--')
 #Throttle trace
 ax[2].plot(telemetry_driver_1['Distance'], telemetry_driver_1['Throttle'], label = driver_1, color = ff1.plotting.team_color(team_driver_1))
 ax[2].plot(telemetry_driver_2['Distance'], telemetry_driver_2['Throttle'], label = driver_2, color = ff1.plotting.team_color(team_driver_2))
+ax[2].plot(telemetry_driver_3['Distance'], telemetry_driver_3['Throttle'], label = driver_3, color = ff1.plotting.team_color(team_driver_3))
 ax[2].set(ylabel = 'Throttle')
 ax[2].legend(loc='lower right')
 
 #Brake trace
 ax[3].plot(telemetry_driver_1['Distance'], telemetry_driver_1['Brake'], label = driver_1, color = ff1.plotting.team_color(team_driver_1))
 ax[3].plot(telemetry_driver_2['Distance'], telemetry_driver_2['Brake'], label = driver_2, color = ff1.plotting.team_color(team_driver_2))
+ax[3].plot(telemetry_driver_3['Distance'], telemetry_driver_3['Brake'], label = driver_3, color = ff1.plotting.team_color(team_driver_3))
 ax[3].set(ylabel = 'Brake')
 
 
@@ -93,6 +101,7 @@ ax[4].set(ylabel = 'Gear')
 #RPM trace
 ax[5].plot(telemetry_driver_1['Distance'], telemetry_driver_1['RPM'], label=driver_1, color=ff1.plotting.team_color(team_driver_1))
 ax[5].plot(telemetry_driver_2['Distance'], telemetry_driver_2['RPM'], label=driver_2, color=ff1.plotting.team_color(team_driver_2))
+ax[5].plot(telemetry_driver_3['Distance'], telemetry_driver_3['RPM'], label=driver_3, color=ff1.plotting.team_color(team_driver_3))
 ax[5].set(ylabel='RPM')
 ax[5].legend(loc='lower right')
 
