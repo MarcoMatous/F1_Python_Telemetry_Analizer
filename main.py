@@ -49,17 +49,41 @@ plot_size = [15,15]
 plot_title = f"{quali.event.year} {quali.event.EventName} - {quali.name} - {driver_1} vs {driver_2}"
 plot_ratios = [1,3,2,1,1,2,1]
     #specifies the size of the subplots 
-plot_filename = plot_title + ".png"
+plot_filename = plot_title.replace(' ', '') + ".png"
 plt.rcParams['figure.figsize'] = plot_size
 fig, ax = plt.subplots(7, gridspec_kw={'height_ratios':plot_ratios})
 
 #setting the plot title
 ax[0].title.set_text(plot_title)
 
+
 # plotting the delta line
 ax[0].plot(ref_tel['Distance'],delta_time)
 ax[0].axhline(0)
 ax[0].set(ylabel = f"Gap to {driver_2} (s)")
+ax[0].legend(loc='lower right')
 
-#speed trace
 
+#Speed trace    
+ax[1].plot(telemetry_driver_1['Distance'], telemetry_driver_1['Speed'], label = driver_1, color = ff1.plotting.team_color(team_driver_1))
+ax[1].plot(telemetry_driver_2['Distance'], telemetry_driver_2['Speed'], label = driver_2, color = ff1.plotting.team_color(team_driver_2))
+ax[1].set(ylabel = 'Speed')
+ax[1].legend(loc='lower right')
+ax[1].grid(True, linestyle = '--')
+
+
+#Throttle trace
+ax[2].plot(telemetry_driver_1['Distance'], telemetry_driver_1['Throttle'], label = driver_1, color = ff1.plotting.team_color(team_driver_1))
+ax[2].plot(telemetry_driver_2['Distance'], telemetry_driver_2['Throttle'], label = driver_2, color = ff1.plotting.team_color(team_driver_2))
+ax[2].set(ylabel = 'Throttle')
+ax[2].legend(loc='lower right')
+
+
+
+# Hide x labels and tick labels for top plots and y ticks for right plots.
+for a in ax.flat:
+    a.label_outer()
+    
+# Store figure
+plt.savefig(plot_filename, dpi=300)
+plt.show()
