@@ -9,13 +9,14 @@ from matplotlib.pyplot import figure
 import numpy as np 
 import pandas as pd
 
+
 # Enabling cache so that I can save the datas from fastf1 on my pc and whenever I run them I won't need to connect to fastf1.
 ff1.Cache.enable_cache('cache') 
 
 
 ####################################################
 ## Collecting the data ##
-year, grand_prix, session = 2022,'Italy', 'Q'
+year, grand_prix, session = 2022,'Saudi Arabia', 'Q'
 quali = ff1.get_session(year, grand_prix, session)
 quali.load()
 driver_1, driver_2 = 'PER', 'LEC'
@@ -47,11 +48,18 @@ delta_time, ref_tel, compare_tel = utils.delta_time(fastest_driver_1, fastest_dr
 plot_size = [15,15]
 plot_title = f"{quali.event.year} {quali.event.EventName} - {quali.name} - {driver_1} vs {driver_2}"
 plot_ratios = [1,3,2,1,1,2,1]
+    #specifies the size of the subplots 
 plot_filename = plot_title + ".png"
+plt.rcParams['figure.figsize'] = plot_size
+fig, ax = plt.subplots(7, gridspec_kw={'height_ratios':plot_ratios})
 
-print(quali.event)
+#setting the plot title
+ax[0].title.set_text(plot_title)
 
-print()
-print()
+# plotting the delta line
+ax[0].plot(ref_tel['Distance'],delta_time)
+ax[0].axhline(0)
+ax[0].set(ylabel = f"Gap to {driver_2} (s)")
 
-print(plot_filename)
+#speed trace
+
