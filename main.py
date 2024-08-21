@@ -112,6 +112,8 @@ ax[6].plot(telemetry_driver_2['Distance'], telemetry_driver_2['DRS'], label=driv
 ax[6].set(ylabel='DRS')
 ax[6].set(xlabel='Lap distance (meters)')
 
+
+
 # Hide x labels and tick labels for top plots and y ticks for right plots.
 for a in ax.flat:
     a.label_outer()
