@@ -6,9 +6,12 @@ LINE 21: make is so that we can decide the numbers of pilots, make a for loop fo
 
 LINE 48: use a data structure to store the drivers' names and then extract them in order in the plot title + 48-50 play with ratios numbers
 
+@@@@@
 
-LINE
+LINE ADD LAPTIME AND DISTANCE(METERS) --> https://medium.com/towards-formula-1-analysis/how-i-analyze-formula-1-data-with-python-2021-italian-gp-dfb11db4b73
 
+ADD SECTORS AND TYRE PERFORMANCE --> https://medium.com/towards-formula-1-analysis/analyzing-formula-1-data-using-python-2021-abu-dhabi-gp-minisector-comparison-3d72aa39e5e8 ; https://medium.com/towards-formula-1-analysis/formula-1-data-analysis-tutorial-2021-russian-gp-to-box-or-not-to-box-da6399bd4a39
+@@@@@
 
 LINE
 
