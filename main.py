@@ -26,11 +26,12 @@ ff1.Cache.enable_cache('cache')
 
 ####################################################
 ## Collecting the data ##
-year, grand_prix, session = 2022,'Hungary', 'R'
+year, grand_prix, session = 2023,'Abu Dhabi', ''
 quali = ff1.get_session(year, grand_prix, session)
 quali.load()
-driver_1, driver_2, driver_3 = 'LEC', 'LAT', 'LAT'
-
+driver_1, driver_2  = 'LAT', 'LEC'
+    #driver_3 = 'VET'
+    
 # Accessing the laps with the .laps object coming from the session
 laps_driver_1 = quali.laps.pick_driver(driver_1)
 laps_driver_2 = quali.laps.pick_driver(driver_2)
