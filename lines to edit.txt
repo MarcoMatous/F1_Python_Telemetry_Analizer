@@ -9,24 +9,3 @@ LINE 48: use a data structure to store the drivers' names and then extract them 
 @@@@@
 POSITION CHANGES -->
 GEAR SHIFTING ON THE TRACK (?) -->
-
-
-https://medium.com/towards-formula-1-analysis/how-to-analyze-formula-1-telemetry-in-2022-a-python-tutorial-309ced4b8992
-
-https://medium.com/towards-formula-1-analysis/how-to-analyze-formula-1-data-with-python-a-beginners-tutorial-23087c4eef1d
-
-
-https://docs.fastf1.dev/gen_modules/examples_gallery/index.html
-
-https://docs.fastf1.dev/gen_modules/examples_gallery/plot_annotate_speed_trace.html#sphx-glr-gen-modules-examples-gallery-plot-annotate-speed-trace-py
-
-https://docs.fastf1.dev/gen_modules/examples_gallery/plot_position_changes.html#sphx-glr-gen-modules-examples-gallery-plot-position-changes-py
-
-https://docs.fastf1.dev/gen_modules/examples_gallery/plot_speed_traces.html#sphx-glr-gen-modules-examples-gallery-plot-speed-traces-py
-
-https://docs.fastf1.dev/gen_modules/examples_gallery/plot_speed_traces.html#sphx-glr-gen-modules-examples-gallery-plot-speed-traces-py
-
-https://docs.fastf1.dev/gen_modules/examples_gallery/plot_laptimes_distribution.html#sphx-glr-gen-modules-examples-gallery-plot-laptimes-distribution-py
-
-https://docs.fastf1.dev/gen_modules/examples_gallery/plot_annotate_speed_trace.html#sphx-glr-gen-modules-examples-gallery-plot-annotate-speed-trace-py
-

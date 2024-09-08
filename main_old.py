@@ -8,6 +8,8 @@ NB, TO DO, TASKS:
 
 '''
 
+year, grand_prix, session = 2022,'Abu Dhabi', 'R'
+
 import fastf1 as ff1
 from fastf1 import plotting
 from fastf1 import utils 
@@ -19,14 +21,12 @@ import numpy as np
 import pandas as pd
 
 
-
 # Enabling cache so that I can save the datas from fastf1 on my pc and whenever I run them I won't need to connect to fastf1.
 ff1.Cache.enable_cache('cache') 
 
 
 ####################################################
 ## Collecting the data ##
-year, grand_prix, session = 2023,'Abu Dhabi', ''
 quali = ff1.get_session(year, grand_prix, session)
 quali.load()
 driver_1, driver_2  = 'LAT', 'LEC'
