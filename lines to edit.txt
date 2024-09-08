@@ -7,19 +7,9 @@ LINE 21: make is so that we can decide the numbers of pilots, make a for loop fo
 LINE 48: use a data structure to store the drivers' names and then extract them in order in the plot title + 48-50 play with ratios numbers
 
 @@@@@
-ADD LAPTIME AND DISTANCE(METERS) --> https://medium.com/towards-formula-1-analysis/how-i-analyze-formula-1-data-with-python-2021-italian-gp-dfb11db4b73
+POSITION CHANGES -->
+GEAR SHIFTING ON THE TRACK (?) -->
 
-no ADD SECTORS AND TYRE PERFORMANCE --> https://medium.com/towards-formula-1-analysis/analyzing-formula-1-data-using-python-2021-abu-dhabi-gp-minisector-comparison-3d72aa39e5e8 ; https://medium.com/towards-formula-1-analysis/formula-1-data-analysis-tutorial-2021-russian-gp-to-box-or-not-to-box-da6399bd4a39
-instead do --> https://docs.fastf1.dev/gen_modules/examples_gallery/plot_laptimes_distribution.html#sphx-glr-gen-modules-examples-gallery-plot-laptimes-distribution-py
-
-@@@@@
-
-LINE
-
-
-https://medium.com/towards-formula-1-analysis/how-i-analyze-formula-1-data-with-python-2021-italian-gp-dfb11db4b73
-
-https://medium.com/towards-formula-1-analysis/how-i-analyze-formula-1-data-with-python-2021-italian-gp-dfb11db4b73
 
 https://medium.com/towards-formula-1-analysis/how-to-analyze-formula-1-telemetry-in-2022-a-python-tutorial-309ced4b8992
 

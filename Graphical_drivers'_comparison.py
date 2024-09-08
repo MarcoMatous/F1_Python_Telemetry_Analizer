@@ -3,14 +3,13 @@ import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.collections import LineCollection
 import fastf1 as ff1
-
-
+import fastf1.plotting
 
 # Enabling cache so that I can save the datas from fastf1 on my pc and whenever I run them I won't need to connect to fastf1.
 ff1.Cache.enable_cache('cache') 
 
 # Loading race and preparing data
-year, wknd, ses, driver_1, driver_2 = 2023, 2, 'R', 'BOT', 'HAM'
+year, wknd, ses, driver_1, driver_2 = 2021, 7, 'FP3', 'LAT', 'LEC'
 colormap = mpl.cm.plasma # type: ignore
 
 session = ff1.get_session(year, wknd, ses)
@@ -38,6 +37,7 @@ points_2 = np.array([x_2, y_2]).T.reshape(-1, 1, 2)
 segments_2 = np.concatenate([points_2[:-1], points_2[1:]], axis = 1)
 
 # Create subplots
+ff1.plotting.setup_mpl(mpl_timedelta_support=False, misc_mpl_mods=False, color_scheme='fastf1') # type:ignore
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(18, 6.75))
 plot_title = fig.suptitle(f'Season\'s weekend:{weekend.name}  Y:{year} - {what} Comparison - {driver_1} vs {driver_2}', size=24, y=0.97)
 
