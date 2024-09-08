@@ -13,16 +13,17 @@ HOW
 	I first studied the fastf1 library and reviewed some concepts on plotting graphs in a clear and readable way.
  	I then proceeded with some guidance of examples on the fastf1 documentation and later I implemented some of my knowledge in pyhton. 
   	Mainly: data strucutres, data visualization, qualitative research and quantitative research and testing
-   	
-    	To complete the project and reach project goals.
+   	To complete the project and reach project goals.
 
 RESULTS and CONCLUSION
 
  	The program returns graphs of tyre comparison, laptimes comparison and 1to1 driver race strategy comparison. 
-  	The choiche of using more python files has been made to keep things in order, easier debugging and better graph visualisation as it's possible to keep more figures on the screen. 
+  	The choiche of using more python files has been made to keep things in order, easier debugging and better graph visualisation
+   	as it's possible to keep more figures on the screen. 
 
---SKILLS--
-	- create a github environment ( GitHub, GitHub Desktop)
+SKILLS
+
+ 	- create a github environment ( GitHub, GitHub Desktop)
 	- data analysis
 	- data visualization
 	- python
