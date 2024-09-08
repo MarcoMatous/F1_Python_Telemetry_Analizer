@@ -2,7 +2,7 @@
 This project aims to build something with the programming and data analysis skills I have learned in my first semester of mechanical engineering while combining my passion and enthusiasm for motorsport :).
 
 
---WHAT and GOALS--
+WHAT and GOALS
 	- analise historical datas and analysie races' outcomes
 	- analise&comparing driving strategies of teams (tyres, speeds, laptimes, brakings, rpms and much more)
 	- comparing drivers with the best driver( winning one) to optimize race strategy or check wich component of the car needs some improvements to imporve race performance based on the competition
