@@ -1,12 +1,8 @@
 # We import the packages we need/ install them
 # I run 'pip install [ package-name]' in command line
 
-'''
-NB, TO DO, TASKS: 
-1) ADD USEFUL STUFF FROM FASF1 DOC EXMPLES
-2) REFINE
+year, grand_prix, session = 2021,'France', 'FP3'
 
-'''
 
 import fastf1 as ff1
 from fastf1 import plotting
@@ -26,7 +22,6 @@ ff1.Cache.enable_cache('cache')
 
 ####################################################
 ## Collecting the data ##
-year, grand_prix, session = 2021,'France', 'FP3'
 quali = ff1.get_session(year, grand_prix, session)
 quali.load()
 driver_1, driver_2  = 'LAT', 'LEC'

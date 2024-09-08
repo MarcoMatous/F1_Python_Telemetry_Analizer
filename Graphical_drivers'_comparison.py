@@ -1,3 +1,6 @@
+
+year, wknd, ses, driver_1, driver_2 = 2021, 7, 'FP3', 'LAT', 'LEC'
+
 import matplotlib as mpl
 import numpy as np
 from matplotlib import pyplot as plt
@@ -9,7 +12,6 @@ import fastf1.plotting
 ff1.Cache.enable_cache('cache') 
 
 # Loading race and preparing data
-year, wknd, ses, driver_1, driver_2 = 2021, 7, 'FP3', 'LAT', 'LEC'
 colormap = mpl.cm.plasma # type: ignore
 
 session = ff1.get_session(year, wknd, ses)
